@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 1</title>
+    <script>
+        /*ejercicio 1*/
+        function a() {
+            return 35;
+        }
+        console.log(a()) //console.log(35)
+            //respuesta:35
+
+        /*ejercicio 2*/
+        function a() {
+            return 4;
+        }
+        console.log(a() + a()); //console.log (4+4)-->console.log 8
+        //respuesta:8
+
+        /*ejercicio 3*/
+        function a(b) {
+            return b;
+        }
+        console.log(a(2) + a(4)); //console.log (2)+(4)-->console.log (6)
+        //respuesta:6
+
+        /*ejercicio 4*/
+        function a(b) { //3
+                
+            console.log(b); //return 3*3
+            return b * 3; //console.log (9)
+            //respuesta:9
+
+        }
+        console.log(a(3)); //
+
+        /*ejercicio 5*/
+        function a(b) { //b=10
+            return b * 4; //return 10*40
+            console.log(b); //nunca se va a ejecutar esta instruccion
+        }
+        console.log(a(10)); //console.log(40)
+        //respuesta:40
+
+        /*ejercicio 6*/
+        function a(b) { //b=15
+            if (b < 10) { //es 15 menor a 10?, no
+                return 2;
+            }    
+            else {
+                return 4; //entonces retorna 4
+            }
+            console.log(b); //esto nunca se ejecuta porque el return saca de la funcion
+        }
+        console.log(a(15)); //console.log(4)
+        //respuesta:4
+
+        /*ejercicio 7*/
+        function a(b, c) { //b=3, C=10
+            return b * c; //return 3*10
+        }
+        console.log(10, 3); //no llama la funcion solo imprime
+        console.log(a(3, 10)); //console.log (30)
+        //respuesta:10,3, 30
+
+        /*ejercicio 8*/
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3); //no se llama la funcion solo imprime
+        console.log(4);
+        //respuesta: 3,4
+
+        /*ejercicio 9*/
+        function a() {
+            for (var i = 0; i < 10; i++) { //i=0,i=3,i=6,i=9,i=12
+                i = i + 2; //0+2=2+1=3
+                //3+2=5+1=6
+                //6+2=8+1=9
+                //9+2=11+1=12
+                console.log(i); //console.log (2,5,8,11)
+            } //respuesta: 2,5,8,11
+        }
+        a();
+        /*ejercicio 10*/
+        function a(b, c) { //b=0, c=10// i=0>1>2>3>4>5>6>7>8>9>10
+            for (var i = b; i < c; i++) { //i=0;i<10;i++
+                console.log(i);
+            }
+            return b * c; //0*10=0
+        }
+        a(0, 10); //0
+        console.log(a(0, 10)); //console.log(0)
+        //respuesta:0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0
+
+        //*ejercicio 11*/
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(j);
+                }
+                console.log(i); //no hay llamado a la funcion
+            }
+        }
+        //respuesta: NADA
+
+        /* ejercicio 12*/
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(i, j);
+                }
+                console.log(j, i); //no hay llamado a la funcion
+            }
+        }
+        //respuesta:NADA
+
+        /* ejercicio 13*/
+        var z = 10; //declara o define una variable
+
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        console.log(z); //console.log(10)
+        //respuesta: 10
+
+        /* ejercicio 14*/
+        var z = 10; //declara variable
+
+        function a() {
+            var z = 15;
+            console.log(z); //console.log(15)
+        }
+        a(); //llamado a la funcion, se ejecuta
+        console.log(z);
+        //respuesta: 15,10
+
+        /* ejercicio 15*/
+        var z = 10; //declara variable
+
+        function a() {
+            var z = 15; //nueva variable
+            console.log(z); //console.log(15)
+            return z; //retorna Z
+        }
+        z = a(); //sobreescribe la variable Z con el resultado de la funcion
+        console.log(z); //console.log(15)
+        //respuesta:15,15
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
