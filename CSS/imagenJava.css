@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 970px;
+    background-color: #1b345d;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.header {
+    min-height: 75px;
+    background-color: #cf3036;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.header h1 {
+    margin-left: 15px;
+    padding-top: 15px;
+    color: #c2d6ec;
+}
+
+.navigation {
+    min-height: 200px;
+    width: 170px;
+    background-color: #2a7d8c;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.navigation ul {
+    padding-left: 20px;
+    color: #bdd3e9;
+}
+
+.navigation a {
+    color: #5fd0d8;
+}
+
+p {
+    padding-bottom: 5px;
+}
+
+.main {
+    min-height: 400px;
+    width: 720px;
+    background-color: #0e1822;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 15px;
+    color: #c1d5eb;
+}
+
+.main li {
+    padding-bottom: 15px;
+    margin-left: 15px;
+}
+
+.main span {
+    color: #556df8;
+}
+
+.main b {
+    color: #4eafcc;
+}
+
+.footer {
+    min-height: 30px;
+    width: 950px;
+    background-color: #5d6673;
+    margin-top: 15px;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 10px
+}
+
+.footer p {
+    margin-left: 5px;
+    padding-top: 10px;
+}
+
+.footer span {
+    color: white;
+}
+
+.footer a {
+    color: #68ccd6;
+}

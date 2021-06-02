@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Página Básica con Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <nav class="navbar bg-success gradient">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="../HTML/fotos/verde.jpg" alt="" width="100" height="80" class=" d-inline-block align-text-top rounded-circle">
+                    </a>
+                    <p class="text-md-start fs-3 fst-italic "><strong> ¡¡¡ Damos nueva vida a tus Muebles... </strong> </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class=" btn btn-outline-warning">Home</button>
+                        <button class="btn btn-outline-warning" type="button">Sobre Nosotros</button>
+                        <button class="btn btn-outline-warning" type="button">Nuestros Trabajos</button>
+                        <button class="btn btn-outline-warning" type="button">Contáctanos</button>
+                        <button type="button" class="btn btn-outline-warning">Suscribirse</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="main_content">
+            <div class="jumbotron">
+                <p class="text-md-center fs-3"> Suscríbete ahora y obtén un 10% de descuento</p>
+                <p class="lead">
+                    <div class="d-grid gap-2 col-2 mx-auto">
+                        <button class="btn btn-success" type="button">Suscribirse</button>
+                    </div>
+                </p>
+            </div>
+            <br>
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <p class="text-md-center fs-5 "><strong> Aprende a realizar tu Proyecto </strong> </p>
+                        <img src="../HTML/fotos/comoda.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Talleres</h5>
+                            <p class="card-text"> Si prefieres realizar tu Proyecto en casa, a través de nuestros talleres aprenderás las técnicas necesarias </p>
+                            <a href="#" class="btn btn-primary">Inicia Ahora...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <p class="text-md-center fs-5 "><strong> Crea tu Proyecto </strong> </p>
+                        <img src="../HTML/fotos/comoda22.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Crear Proyecto</h5>
+                            <p class="card-text"> A través de nuestra aplicación podrás visualizar tu Proyecto paso a paso </p>
+                            <a href="#" class="btn btn-primary">Revisa nuestro Demo...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <p class="text-md-center fs-5 "><strong> Nosotros lo hacemos por ti </strong> </p>
+                        <img src="../HTML/fotos/cajonera.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuestros Talleres</h5>
+                            <p class="card-text"> Los mejores talleres en convenio, para que tus ideas se hagan realidad </p>
+                            <a href="#" class="btn btn-primary">Conoce Más...</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar bg-success gradient">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="../HTML/fotos/muebles.PNG" alt="" width="400" height="280" class=" d-inline-block align-text-top">
+                        </a>
+                        <p class="text-center"> Somos una empresa familiar ubicada en la ciudad de Temuco,
+                            <br> nos dedicamos a hacer realidad tus ideas y fomentamos el cuidado del medio ambiente
+                            <br><a href="#">¡¡¡ Más sobre Nosotros... </a></p>
+                    </div>
+                </nav>
+            </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col order-last">
+                        <h4>Contáctanos:</h4>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Detalle el motivo del contacto</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                    </div>
+                    <div class="col">
+                        <h4>Regístrate:</h4>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-6">
+                                <label for="validationCustom01" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="Pedro" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom02" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="Mardones" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Clave de 4 digitos</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Clave">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-10">
+                                <label for="inputAddress">Domicilio</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Manuel carrillo">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom03" class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" id="validationCustom03" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="validationCustom04" class="form-label">Región</label>
+                                <select class="form-select" id="validationCustom04" required>
+                                <option selected disabled value="">...</option>
+                                <option>...</option>
+                              </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid state.
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-6">
+                                <label for="validationCustom05" class="form-label">Número de Teléfono</label>
+                                <input type="text" class="form-control" id="validationCustom05" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                        Acepta los términos y condiciones
+                                </label>
+                                    <div class="invalid-feedback">
+                                        Debes estar de acuerdo antes de enviar.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Enviar Suscripción</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col order-first">
+                        <h4>Iniciar Sesión:</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Dirección de Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa correo">
+                                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo electrónico.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Clave</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa Clave">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <div class="card text-center">
+                    <div class="card-header bg-success gradient">
+
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Síguenos en Redes Sociales</h5>
+                        <a href="http://emol.cl" target="_blank">
+                            <img src="../HTML/fotos/instagram.jpg" alt="instagram"> </a>
+                        <p class="card-text">Calle Toremolinos 45, Temuco</p>
+                        <p class="card-text">Correo Electrónico: mmonjeds@gmail.com</p>
+                        <img src="../HTML/fotos/whatsApp.png" alt="">
+                        <a href="#" class="btn btn-primary">+56 991783364</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
