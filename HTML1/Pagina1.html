@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primera clase!::</title>
+</head>
+
+<body>
+    <div>
+        <!--formularios, action es la ruta hacia donde enviamos la info-->
+        <!--como no tenemos nada queda en vacio o lo borramos-->
+        <form action="" method="POST">
+            <!--el method POST es para enviar info oculta-->
+            <!-- label es una etiqueta que pemite q veamos info enriquecida-->
+            <label for="nombre">Nombre:</label >&nbsp;<!--agrega un espacio para alinear-->
+            <!--input ingrese la informacion aqui de type o tipo texto por ejemplo-->
+            <input type="text" id="nombre">
+            <br>
+            <label for="apellido">Apellido</label>&nbsp;
+            <input type="text" id="apellido">
+            <br>
+            <label for="password">Password</label>&nbsp;
+            <input type="password" name="password" id="password">
+            <br>
+            <label for="email">Email:</label>&nbsp;
+            <input type="email" name="email" id="email">
+            <br>
+            <label for="fecha">Cumpleaños</label>
+            <input type="date" name="fecha" id="fecha">
+            <br>
+            <!--radio, se utiliza para opciones unicas, el name debe tener mismo nombre-->
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="sexo" id="masculino">
+            <label for="femenino">Femenino</label>
+            <input type="radio" name="sexo" id="femenino">
+            <label for="otro">Otro</label>
+            <input type="radio" name="sexo" id="otro">
+            <br>
+            <!--checkbox, opciones unicas, se puede des seleccionar-->
+            <br>
+            <!--valor con el que se va el elemento-->
+            <label for="verano">Verano</label>
+            <input type="checkbox" name="estaciones" id="verano" value="verano">
+            <label for="otoño">Otoño</label>
+            <input type="checkbox" name="estaciones" id="otoño" value="otoño">
+            <label for="primavera">Primavera</label>
+            <input type="checkbox" name="estaciones" id="primavera" value="primavera">
+            <label for="invierno">invierno</label>
+            <input type="checkbox" name="estaciones" id="invierno" value="invierno">
+            <br>
+            <br>
+            <!--select es selector, elemento que se llena de manera dinamica-->
+            <select name="lenguajes" id="lenguajes">
+                <option value="-1">Seleccione un Lenguaje...</option>
+                <option value="HTML">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+            <br>
+            <!--texarea cols es columnas y rows filas se establece el tamaño -->
+            <textarea name="descripcion" id="descripcion" cols="25" rows="10"></textarea>
+            <br>
+            <!--botones, este boton no tiene actividad debe configurarse para enviar-->
+            <input type="button" value="Enviar">
+            <br>
+            <!--boton submit se ocupa para envio del formulario, no necesita configurar-->
+            <input type="submit" value="Enviar">
+
+        </form>
+        <!--esto es un comentario-->
+        <!--Titulos en HTML-->
+        <h1>Hola Moni¡¡</h1>
+        <h2>titulo h2</h2>
+        <h3>titulo h3</h3>
+        <h4>titulo h4</h4>
+        <h5>titulo h5</h5>
+        <h6>titulo h6</h6>
+        <!--titulo mas pequeño-->
+        <h1>titulo</h1>
+        <!--salto de linea-->
+        <br>
+        <!--puedo agregar varios-->
+        <!--dibujar linea horizontal-->
+        <hr>
+        <!--para los parrafos-->
+        <h4>esto son parrafos con p y pre</h4>
+        <p>esto es un parrafo</p>
+        <br>
+        <p>esto es un parrafo despues de un salto de linea</p>
+        <!--el pre me muestra de la misma forma en que yo escribo es un pre formato-->
+        <pre>
+            Hola
+                Hola
+                        hola
+        </pre>
+        <hr>
+        <!--imagenes src es la ruta alt se mostrara si no encuentra el archivo-->
+        <img src="fotos/muebles.PNG" alt="imagen o foto">
+        <br>
+        <img src="fotos/velador.jpg" alt="velador">
+        <!--wigth es el ancho de la foto; height es el alto de la foto-->
+        <br>
+        <hr>
+        <img src="fotos/velador.jpg" alt="foto mas grande" width=300px>
+        <hr>
+        <img src="fotos/velador.jpg" alt="foto mas grande" width=30%>
+        <!--con el porcentaje ajustamos en relacion al espacio de la pagina-->
+        <hr>
+        <!--hiper vinculos-->
+        <a href="http://www.sii.cl"> ir a pagina de SII</a>
+        <br>
+        <a href="http://www.lun.com" target="_blank">abrir pagina en otra pestaña</a>
+        <br>
+        <!--hiper vinculo con imagen -->
+        <a href="http://emol.cl" target="_blank">
+            <img src="fotos/muebles.PNG" alt="emol">
+        </a>
+        <!--ul ol listas ordenada y desordenada-->
+        <ol>
+            <li>elemento 1</li>
+            <li>mona</li>
+        </ol>
+        <br>
+        <ul>
+            <li>opcion 1</li>
+            <li>opcion2</li>
+        </ul>
+        <br>
+        <li>opcion1</li>
+        <li>opcion2</li>
+        <ul>
+            <li>opcion3</li>
+            <ul>
+                <li>opcion4</li>
+
+            </ul>
+        </ul>
+        <!--tablas-->
+        <table>
+            <!--titulos de tablas-->
+
+            <thead>
+                <!--tr es igual a una fila-->
+                <tr>
+                    <!-- th titulos por cada una de las columnas-->
+                    <th>#</th>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th>apellido2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--td es columna-->
+                    <td>1</td>
+                    <td>mona</td>
+                    <td>monje</td>
+                    <td>delgado</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>laura</td>
+                    <td>meza</td>
+                    <td>llano</td>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                        <!--vacio porque no tengo el dato-->
+                        <td>salgado</td>
+                        <td>apellido2</td>
+                    </tr>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+
+    </div>
+</body>
+
+</html>

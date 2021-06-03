@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /*formas de agregar estilo*/
+        /* por elemento (etiqueta)*/
+        
+        p {
+            color: green;
+            font-size: 30px;
+        }
+        
+        table {
+            width: 100;
+        }
+        /*por la clase*/
+        /*a uno o varios elementos*/
+        
+        .colores {
+            color: hotpink;
+        }
+        /* por el id (#)*/
+        
+        #parrafo3 {
+            color: lawngreen;
+        }
+        /*agrego una imagen de fondo*/
+        
+        #fondo {
+            background: url(fotos/mona.jpg);
+            background-color: mediumorchid;
+            background-image: url(fotos/muebles.PNG);
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fondo">
+        <p>esto es un parrafo 1</p>
+        <p class="colores" esto es un parrafo 2></p>
+        <p class="colores" id="parrafo3"> esto es un parrafo 3</p>
+        <p>solo para los p es verde</p>
+        <label for="">esto es un label sin estilo</label>
+        <table>
+            <thead>
+                <tr>
+                    <th>col1</th>
+                    <tr>
+                        <tbody>
+                            <td>mona</td>
+                            <td>perro</td>
+                        </tbody>
+                    </tr>
+                </tr>
+            </thead>
+        </table>
+
+    </div>
+</body>
+
+</html>

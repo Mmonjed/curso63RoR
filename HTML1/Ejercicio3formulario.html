@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div>
+        <form action="" method="POST">
+            <h1>Formulario de Registro</h1>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id=nombre>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" id="contraseña">
+            <br>
+            <label for="ccontraseña">Confirmar Contraseña:</label>
+            <input type="password" name="ccontraseña" id="ccontraseña">
+            <br>
+            <label for="cumple">Cumpleaños:</label>
+            <input type="date" name="cumple" id="cumple">
+            <br>
+            <br>
+            <label for="hombre">Hombre</label>
+            <input type="radio" name="sexo" id="hombre">
+            <label for="mujer">Mujer</label>
+            <input type="radio" name="sexo" id="mujer">
+            <label for="otro">Otro</label>
+            <input type="radio" name="sexo" id="otro">
+            <br>
+            <p>Una breve descripción de ti</p>
+            <textarea name="descripcion" id="" cols="30" rows="5"></textarea>
+            <br>
+            <label for="lenguaje">Lenguaje Favorito</label>
+            <select name="lenguaje" id="lenguaje">
+                    <option value="selecciona">Selecciona</option>
+                    <option value="html">HTML</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="Css">CSS</option>
+                </select>
+            <br>
+            <br>
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+
+</body>
+
+</html>

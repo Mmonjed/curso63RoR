@@ -1,0 +1,111 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 95%;
+    background-color: silver;
+    margin: 0px auto;
+    padding: 15px;
+}
+
+#header {
+    min-height: 150px;
+    background-color: green;
+    margin-bottom: 20px;
+}
+
+#navigation {
+    min-height: 300px;
+    width: 21%;
+    background-color: blue;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+#main_content {
+    min-height: 400%;
+    width: 74%;
+    background-color: red;
+    display: inline-block;
+    padding: 15px;
+}
+
+.subcontents {
+    min-height: 200px;
+    width: 31%;
+    background-color: yellow;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#advertisement {
+    min-height: 120px;
+    width: 97%;
+    background-color: purple;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 480px) {
+    #header {
+        width: 99%;
+    }
+    #navigation {
+        display: none;
+    }
+    #main_content {
+        width: 92%;
+    }
+    .subcontents {
+        width: 90%;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+    #advertisement {
+        width: 90%;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width: 1023px) {
+    #header {
+        width: 99%;
+    }
+    #navigation {
+        display: none;
+    }
+    #main_content {
+        width: 89%;
+        margin-left: 15px;
+    }
+    .subcontents {
+        width: 44%;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    #advertisement {
+        width: 95%;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #header {
+        width: 99%;
+    }
+    #navigation {
+        width: 21%;
+    }
+    #main_content {
+        width: 73%;
+    }
+    .subcontents {
+        width: 31%;
+    }
+    #advertisement {
+        width: 97%;
+    }
+}
