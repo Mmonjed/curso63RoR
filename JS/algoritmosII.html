@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos II</title>
+    <style></style>
+    <script>
+        console.log("Fundamentos básicos JavaScript")
+            //ejercicio 1
+        function a() {
+            console.log('hello');
+        }
+        console.log('Dojo'); // no se llama la función, solo imprime Dojo
+        // respuesta: Dojo
+
+        //ejercicio 2
+        function a() {
+            console.log('hello');
+            return 15;
+        }
+        x = a();
+        console.log('x is', x);
+        //respuesta:hello, x is, 15
+
+        //ejercicio 3
+        function a(n) { //n=3
+            console.log('n is', n); // console.log ('n is',3)
+            return n + 15; // retorna 3+15=18
+        }
+        x = a(3);
+        console.log('x is', x);
+        /*respuesta: 
+        'n is',3
+        'x is', 18
+        */
+
+        //ejercicio 4
+        function a(n) { //n=3 >> n=5
+            console.log('n is', n); //console.log('n is',3) idem con 5
+            y = n * 2; //y= 3*2=6 >> 5*2=10
+            return y; //6, 10 
+        }
+        x = a(3) + a(5); // 6+10
+        console.log('x is', x);
+        /*respuesta:
+        'n is', 3
+        'n is', 5
+        'x is', 16
+        */
+
+        //ejercicio 5
+        function op(a, b) { //a=2 b=3 // a=3 b=5
+            c = a + b; // 2+3=5 // 8
+            console.log('c is', c); //console.log('c is',5)idem con 8
+            return c; //retorna 5, 8
+        }
+        x = op(2, 3) + op(3, 5); // 5+8=13
+        console.log('x is', x);
+        /*respuesta:
+        'c is',5
+        'c is',8
+        'x is',13
+        */
+
+        //ejercicio 6
+        function op(a, b) { //a=2 b=3 //a=2 b=1 //a=3 b=3 //a=2 b=1//a=2 b=3 //a=3 b=5
+            c = a + b; // 5,3,6,3,5,8
+            console.log('c is', c); //console.log ('c is',5..3 6 3 5 8)
+            return c; // 5,3,6,3,5,8
+        }
+        x = op(2, 3) + op(3, op(2, 1)) + op(op(2, 1), op(2, 3)); //suma 5+6+8
+        console.log('x is', x)
+            /*respuesta:
+            'c is',5
+            'c is',3
+            'c is',6
+            'c is',3
+            'c is',5
+            'c is',8
+            ''x is,19
+            */
+
+        //ejercicio 7
+        var x = 15;
+
+        function a() {
+            var x = 10; //dentro de la función no existe un console.log ni return, por lo que no toma el valor de x 
+        }
+        console.log(x);
+        a();
+        console.log(x);
+        // respuesta: 15, 15
+
+        //ejercicio 8
+        function multiply(x, y) { //x=2 y=3
+            console.log(x); //console.log (2)
+            console.log(y); // console.log (3)
+        }
+        b = multiply(2, 3);
+        console.log(b);
+        /*respuesta:
+        2
+        3
+        */
+
+        //ejercicio 9
+        function multiply(x, y) { //x=2 y=3
+            return x * y; //2*3=6
+        }
+        b = multiply(2, 3);
+        console.log(b); //6
+        console.log(multiply(5, 2)); //10
+        /*respuesta:
+        6
+        10
+        */
+
+        //ejercicio 10
+        var x = [1, 2, 3, 4, 5, 10]; //no se considera la variable x
+        for (var i = 0; i < 5; i++) { //i=0, 4, 8 no es menor a 5 
+            i = i + 3; //0+3=3 incremento i en 1 i=4
+            //4+3=7 --> incremento i en 1 i=8
+            console.log(i);
+        }
+        //respuesta: 3,7
+
+        //ejercicio 11
+        var x = 15;
+        console.log(x); //15
+        function awesome() {
+            var x = 10;
+            console.log(x); //console.log(10)
+        }
+        console.log(x); //15
+        awesome(); //10
+        console.log(x); //15
+        /*respuesta:
+        15
+        15
+        10
+        15
+        */
+
+        //ejercicio 12
+        for (var i = 0; i < 15; i += 2) { //i=0,2,4,6,8,10,12,14, 16 no 
+            console.log(i); //2,4,6,8,10,12,14,16
+        }
+        //respuesta: 0,2,4,6,8,10,12,14
+
+        //ejercicio 13
+        for (var i = 0; i < 3; i++) { //i=0,
+            for (var j = 0; j < 2; j++) { //j=0
+                console.log(i * j); //0,0,
+            }
+        }
+        //respuesta: 0,0,0,1,0,2
+
+        //ejercicio 14
+        function looping(x, y) { //x=3 y=3
+            for (var i = 0; i < x; i++) { //i=0,0<3-->i=0,1,2,3no
+                for (var j = 0; j < x; j++) { //j=0,0<3-->j=0,1,2,3
+                    console.log(i * j); //
+                }
+            }
+        }
+        z = looping(3, 3);
+        console.log(z);
+        //respuesta: ???
+
+        //ejercicio 15
+        function looping(x, y) {
+            for (var i = 0; i < x; i++) {
+                for (var j = 0; j < y; j++) {
+
+                    console.log(i * j);
+                }
+            }
+            return x * y;
+        }
+        z = looping(3, 5);
+        console.log(z);
+        //respuesta:??
+
+        //ejercicio 16
+        /*que la función imprima (print) todos los enteros (integers) de 1 a x. 
+        Si x es negativo, haz que se muestre (print/log) “número negativo” y que la función devuelva falso.*/
+
+        function printUpTo(x) {
+            if (x = 0) {
+                console.log('número negativo');
+                return false;
+            } else {
+                for (i = 1; i <= x; i++);
+                console.log(i);
+            }
+        }
+        printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
+        y = printUpTo(-10); // debería imprimir false
+        console.log(y); // debería imprimir false
+
+        //ejercicio 17
+        /*que la función imprima enteros (integers) de 0 a x y donde cada entero imprima la suma (sum) parcial.
+         Haz que la función entregue la suma final.*/
+
+        function printSum(x) {
+            var sum = 0;
+            //your code here
+            return sum
+        }
+        y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
+        console.log(y) // // debería imprimir 32640
+
+        //ejercicio 18
+        //Completa el código a continuación para que la función entregue la suma de todos los valores en un array dado.
+        function printSumArray(x) {
+            var sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                //your code here
+            }
+            return sum;
+        }
+        console.log(printSumArray([1, 2, 3])); // debería imprimir 6
+    </script>
+</head>
+
+<body>
+    <h1>Algoritmos II</h1>
+    <h3>Breve Lección Antes de Actividad</h3>
+    <ol>
+        <li><b>Muestra de código 1 - function y return I</b></li>
+        <img src="fotos/ejer1.PNG" alt="">
+        <li><b>Muestra de código 2 - function y return I</b></li>
+        <img src="fotos/ejer2.PNG" alt="">
+        <li><b>Muestra de código 3 - function y return I</b></li>
+        <img src="fotos/ejer3.PNG" alt="">
+        <li><b>Muestra de código 4 - function y return I</b></li>
+        <img src="fotos/ejer4.PNG" alt="">
+        <li><b>Muestra de código 5 - orden de las operaciones I</b></li>
+        <img src="fotos/ejer5.PNG" alt="">
+        <li><b>Muestra de código 6 - orden de las operaciones I</b></li>
+        <img src="fotos/ejer6.PNG" alt="">
+        <li><b>Muestra de código 7 - scoping</b></li>
+        <img src="fotos/ejer7.PNG" alt="">
+    </ol>
+    <br>
+    <h1>Actividad</h1>
+    <br>
+    <p><b>Ejercicio 8</b></p>
+    <img src="fotos/ejer8.PNG" alt="">
+    <p><b>Ejercicio 9</b></p>
+    <img src="fotos/ejer9.PNG" alt="">
+    <p><b>Ejercicio 10</b></p>
+    <img src="fotos/ejer10.PNG" alt="">
+    <p><b>Ejercicio 11</b></p>
+    <img src="fotos/ejer11.PNG" alt="">
+    <p><b>Ejercicio 12</b></p>
+    <img src="fotos/ejer12.PNG" alt="">
+    <p><b>Ejercicio 13</b></p>
+    <img src="fotos/ejer13.PNG" alt="">
+    <p><b>Ejercicio 14</b></p>
+    <img src="fotos/ejer14.PNG" alt="">
+    <p><b>Ejercicio 15</b></p>
+    <img src="fotos/ejer15.PNG" alt="">
+    <br>
+    <h1>Actividad 2</h1>
+    <p><b>Print 1 to x </b></p>
+    <p> Por favor, completa los siguientes códigos para que la función imprima (print) todos los enteros (integers) de 1 a x. Si x es negativo, haz que se muestre (print/log) “número negativo” y que la función devuelva falso.</p>
+    <br>
+    <p><b>Ejercicio 16</b></p>
+    <img src="fotos/ejer16.PNG" alt="">
+    <p><b>PrintSum</b></p>
+    <p>Completa el código de más abajo para que la función imprima enteros (integers) de 0 a x y donde cada entero imprima la suma (sum) parcial. Haz que la función entregue la suma final.</p>
+    <p><b>Ejercicio 17</b></p>
+    <img src="fotos/ejer17.PNG" alt="">
+    <p><b>PrintSumArray</b></p>
+    <p>Completa el código a continuación para que la función entregue la suma de todos los valores en un array dado.</p>
+    <p><b>Ejercicio 18</b></p>
+    <img src="fotos/ejer18.PNG" alt="">
+
+</body>
+
+</html>
