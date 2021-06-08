@@ -143,7 +143,11 @@
         //ejercicio 11
         // 3) Cuadra cada valor con un array dado, obteniendo el mismo array con valores cambiados..
         function squareValue(x) {
-            // your code here
+            var cuadrado = [];
+            for (var i = 0; i < x.length; i++) {
+                cuadrado = x[i] * x[i];
+                x[i] = cuadrado;
+            }
             return x;
         }
         y = squareValue([1, 2, 3]);
