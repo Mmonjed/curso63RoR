@@ -14,7 +14,7 @@
             console.log('hello');
         }
         console.log('Dojo'); // no se llama la función, solo imprime Dojo
-        // respuesta: Dojo
+        // respuesta: 'Dojo'
 
         //ejercicio 2
         function a() {
@@ -23,7 +23,7 @@
         }
         x = a();
         console.log('x is', x);
-        //respuesta:hello, x is, 15
+        //respuesta:'hello', 'x is', 15
 
         //ejercicio 3
         function a(n) { //n=3
@@ -32,10 +32,10 @@
         }
         x = a(3);
         console.log('x is', x);
-        /*respuesta: 
-        'n is',3
-        'x is', 18
-        */
+        /*respuesta:
+         'n is',3
+         'x is' 18
+         */
 
         //ejercicio 4
         function a(n) { //n=3 >> n=5
@@ -101,10 +101,7 @@
         }
         b = multiply(2, 3);
         console.log(b);
-        /*respuesta:
-        2
-        3
-        */
+        //respuesta: 2,3
 
         //ejercicio 9
         function multiply(x, y) { //x=2 y=3
@@ -113,10 +110,7 @@
         b = multiply(2, 3);
         console.log(b); //6
         console.log(multiply(5, 2)); //10
-        /*respuesta:
-        6
-        10
-        */
+        //respuesta: 6,10
 
         //ejercicio 10
         var x = [1, 2, 3, 4, 5, 10]; //no se considera la variable x
@@ -137,12 +131,7 @@
         console.log(x); //15
         awesome(); //10
         console.log(x); //15
-        /*respuesta:
-        15
-        15
-        10
-        15
-        */
+        //respuesta: 15,15,10,15
 
         //ejercicio 12
         for (var i = 0; i < 15; i += 2) { //i=0,2,4,6,8,10,12,14, 16 no 
@@ -151,49 +140,48 @@
         //respuesta: 0,2,4,6,8,10,12,14
 
         //ejercicio 13
-        for (var i = 0; i < 3; i++) { //i=0,
-            for (var j = 0; j < 2; j++) { //j=0
-                console.log(i * j); //0,0,
+        for (var i = 0; i < 3; i++) { //i=0,1,2,3
+            for (var j = 0; j < 2; j++) { //j=0,1,2no >0,1,2no>0,1,2no
+                console.log(i * j); //0*0,0*1>1*0,1*1> 2*0,2*1
             }
         }
         //respuesta: 0,0,0,1,0,2
 
         //ejercicio 14
-        function looping(x, y) { //x=3 y=3
-            for (var i = 0; i < x; i++) { //i=0,0<3-->i=0,1,2,3no
-                for (var j = 0; j < x; j++) { //j=0,0<3-->j=0,1,2,3
-                    console.log(i * j); //
+        function looping(x, y) { //y=no es llamada,x=3
+            for (var i = 0; i < x; i++) { //i=0,1,2,3no
+                for (var j = 0; j < x; j++) { //j=0,1,2,3no>>
+                    console.log(i * j); //0*0,0*1,0*2>>1*0,1*1,1*2>>2*0,2*1,2*2>>
                 }
             }
         }
         z = looping(3, 3);
         console.log(z);
-        //respuesta: ???
+        //respuesta:0,0,0,0,1,2,0,2,4
 
         //ejercicio 15
-        function looping(x, y) {
-            for (var i = 0; i < x; i++) {
-                for (var j = 0; j < y; j++) {
+        function looping(x, y) { //x=3,y=5
+            for (var i = 0; i < x; i++) { //i=0,1,2,3no
+                for (var j = 0; j < y; j++) { //j=0,1,2,3,4,5no
 
-                    console.log(i * j);
+                    console.log(i * j); //0*0,1,2,3,4>>
                 }
             }
-            return x * y;
+            return x * y; //
         }
         z = looping(3, 5);
         console.log(z);
-        //respuesta:??
+        //respuesta:0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
 
         //ejercicio 16
         /*que la función imprima (print) todos los enteros (integers) de 1 a x. 
         Si x es negativo, haz que se muestre (print/log) “número negativo” y que la función devuelva falso.*/
-
         function printUpTo(x) {
-            if (x = 0) {
+            if (x < 0) { // se establece que si el valor ingresado es negativo imprime numero negativo y retorna falso
                 console.log('número negativo');
-                return false;
-            } else {
-                for (i = 1; i <= x; i++);
+                return ('falso');
+            }
+            for (var i = 1; i <= x; i++) { //imprime todos los numero enteros
                 console.log(i);
             }
         }
@@ -207,7 +195,11 @@
 
         function printSum(x) {
             var sum = 0;
-            //your code here
+            for (var i = 0; i <= x; i++) {
+                console.log(i);
+                sum = sum + i;
+                console.log('suma parcial: ' + sum);
+            }
             return sum
         }
         y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
@@ -218,11 +210,25 @@
         function printSumArray(x) {
             var sum = 0;
             for (var i = 0; i < x.length; i++) {
-                //your code here
+                sum = sum + x[i]; // sum acumula los valores del array 
             }
             return sum;
         }
         console.log(printSumArray([1, 2, 3])); // debería imprimir 6
+
+        //ejercicio 19
+        /*Crea una función que entregue el elemento más grande (largest element) en un array.
+        Por ejemplo largestElement([1,30,5,7]) debiera dar como resultado 30.*/
+        function largestElement(array) {
+            var maximo = array[0];
+            for (var i = 0; i < array.length; i++) { //i[0]=1
+                if (maximo < array[i]) { //si i[0]=1 mayorque array[0]=1
+                    maximo = array[i]
+                }
+            }
+            return maximo;
+        }
+        console.log(largestElement([1, 30, 5, 7]));
     </script>
 </head>
 
@@ -279,6 +285,8 @@
     <p>Completa el código a continuación para que la función entregue la suma de todos los valores en un array dado.</p>
     <p><b>Ejercicio 18</b></p>
     <img src="fotos/ejer18.PNG" alt="">
+    <p><b>Bonus: LargestElement</b></p>
+    <p>Crea una función que entregue el elemento más grande (largest element) en un array. Por ejemplo largestElement([1,30,5,7]) debiera dar como resultado 30.</p>
 
 </body>
 

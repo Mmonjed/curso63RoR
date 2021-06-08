@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos III</title>
+    <script>
+        //ejercicio 1
+        function a(x, y) { //x=5, y=5
+            return 5;
+        }
+        console.log(a(5, 5))
+            //respuesta:5
+
+        //ejercicio 2
+        function a(x, y) { // x=2, Y=2>> 6 8
+            z = [] //array vacio 
+            z.push(x); //agrega valor de x al array
+            z.push(y); // agrega valor de y al array
+            z.push(5); // agrega valor 5 al array
+            console.log(z); //imprime array [2,2,5],[6,8,5]
+            return z; // [2,2,5], [6,8,5]
+        }
+        b = a(2, 2)
+        console.log(b); //imprime la funcion con parametros 2,2
+        console.log(a(6, 8)); //imprime la funcion con parametros 6,8
+        /*respuesta: 
+        [2, 2, 5]
+        [2, 2, 5]
+        [6, 8, 5]
+        [6, 8, 5]
+        */
+
+        //ejercicio 3
+        function a(x) { //x =2
+            z = [];
+            z.push(x); //[2]
+            z.pop(); //[]
+            z.push(x); //[2]
+            z.push(x); //[2,2]
+            return z; //[2,2]
+        }
+        y = a(2); //llamado a la funcion [2,2]
+        y.push(5); //agrego el 5 al array
+        console.log(y);
+        // respuesta: [2,2,5]
+
+        //ejercicio 4
+        function a(x) { //[2,3,4,5]
+            if (x[0] < x[1]) { //si x[0]=2 es menor x[1]=3
+                return true; //retorna true
+            } else {
+                return false;
+            }
+        }
+        b = a([2, 3, 4, 5])
+        console.log(b);
+        //respuesta: true
+
+        //ejercicio 5
+        function a(x) { //[1,2,3,4]
+            for (var i = 0; i < x.length; i++) { //recorro el array>>i=0,1
+                if (x[i] > 0) { //si x[0]=1 mayor 0> todos son mayores que 0
+                    x[i] = 'Coding'; // x[0]= Coding
+                }    
+            }    
+            return x; //['Coding','Coding','Coding','Coding']
+        }
+        console.log(a([1, 2, 3, 4]))
+            //respuesta: ['Coding','Coding','Coding','Coding']
+
+        //ejercicio 6
+        function a(x) { // [5,7,-1,4]
+            for (var i = 0; i < x.length; i++) { //i=0,1,2,3
+                if (x[i] > 5) { //si x[0]=5 es mayor 5..no,7si
+                    x[i] = 'Coding'; // x[0] es 'coding'..no
+                } else if (x[i] < 0) { // x[0] es menor a 0..no
+                    x[i] = 'Dojo';
+                }    
+            }    
+            return x; //retorna array [5,'Coding','Dojo',4]
+        }
+        console.log(a([5, 7, -1, 4]))
+            //respuesta: [5,'Coding','Dojo',4]
+
+        //ejercicio 7
+        function a(x) { // [5,10]
+            if (x[0] > x[1]) { // si x[0]=5 es mayor x[1]=10
+                return x[1]; //retorna x[1]...no cumple la condicion 
+            }
+            return 10; //retorna 10
+        }
+        b = a([5, 10]) // retorno 
+        console.log(b);
+        //respuesta: 10
+
+        //ejercicio 8
+        function sum(x) {
+            sum = 0;
+            for (var i = 0; i < x.length; i++) { //se desconoce el arreglo 
+                sum = sum + x[i];
+                console.log(sum); //imprime suma 
+            }
+            return sum; //retorna suma
+        }
+        /* console.log(sum([5, 7, -1, 4])), si se ingresan estos parametros la respuesta es la suma de cada elemento 
+        del arreglo y el return que es la suma final 
+        //respuesta: idefinido, no se entregan parametros al array 
+
+        //ejercicio 9
+        // 1) Analiza los valores de un array y obtén el promedio (average) de esos valores.*/
+        function printAverage(x) {
+            var sum = 0;
+            var elementos = x.length;
+            for (var i = 0; i < x.length; i++) {
+                sum = sum + x[i];
+                avg = sum / elementos;
+            }
+            return avg;
+        }
+        y = printAverage([1, 2, 3]);
+        console.log(y); // should log 2
+        y = printAverage([2, 5, 8]);
+        console.log(y); // should log 5
+        //respuesta: 2,5
+
+        //ejercicio 10
+        //2) Crea un array con todos los enteros impares (odd integers) entre 1 y 255 (inclusive)
+        function returnOddArray(x) {
+            var array = [0];
+            for (var i = 1; i <= x; i++) {
+                if (i % 2 != 0) {
+                    array.push(i);
+                }
+            }
+            return array;
+        }
+        y = returnOddArray(255);
+        console.log(y); // should log [1,3,5,...,253,255]
+
+        //ejercicio 11
+        // 3) Cuadra cada valor con un array dado, obteniendo el mismo array con valores cambiados..
+        function squareValue(x) {
+            // your code here
+            return x;
+        }
+        y = squareValue([1, 2, 3]);
+        console.log(y); // should log [1,4,9]
+
+        y = squareValue([2, 5, 8]);
+        console.log(y); // should log [4,25,64]
+    </script>
+</head>
+
+<body>
+    <h1>Algoritmos III</h1>
+    <h3>Ejercicio 1</h3>
+    <ol>
+</body>
+
+</html>
