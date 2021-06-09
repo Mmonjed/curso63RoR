@@ -4,12 +4,12 @@
 }
 
 .container {
-    width: 850px;
-    min-height: 600px;
+    width: 53%;
+    height: auto;
     background-color: #d5d2ae;
     text-align: center;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 50px;
     padding-top: 25px;
 }
 
@@ -17,7 +17,6 @@
     width: 100px;
     height: 60px;
     display: inline-block;
-    margin-bottom: 10px;
     background-color: floralwhite;
 }
 
@@ -27,38 +26,52 @@
 }
 
 #main_content {
-    width: 830px;
+    width: 690px;
     min-height: 500px;
     background-color: #d5d2ae;
-    padding: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
 }
 
 .box1 {
-    min-height: 200px;
-    width: 150px;
+    min-height: 150px;
+    width: 130px;
     display: inline-block;
-    margin-right: 10px;
-    background-color: chartreuse;
+    background-color: #d5d2ae;
+    padding-top: 10px;
+}
+
+#boxinterno1 {
+    border: black solid;
+    margin-top: 5px;
+    background-color: #82b4ee;
+    margin-right: 0px;
 }
 
 .box1 img {
     width: 100px;
     height: 100px;
-    border: black solid;
     background-color: #82b4ee;
+    padding-top: 10px;
 }
 
 .box2 {
-    min-height: 200px;
-    width: 150px;
+    min-height: 150px;
+    width: 130px;
     display: inline-block;
-    margin-right: 10px;
-    background-color: red;
+    background-color: #d5d2ae;
+    padding-top: 10px;
+}
+
+#boxinterno2 {
+    border: black solid;
+    margin-top: 5px;
+    background-color: #f36870;
 }
 
 .box2 img {
     width: 100px;
     height: 100px;
-    border: black solid;
     background-color: #f36870;
+    padding-top: 10px;
 }
