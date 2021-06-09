@@ -46,6 +46,7 @@
     margin-top: 5px;
     background-color: #82b4ee;
     margin-right: 0px;
+    padding-bottom: 5px;
 }
 
 .box1 img {
@@ -67,6 +68,7 @@
     border: black solid;
     margin-top: 5px;
     background-color: #f36870;
+    padding-bottom: 5px;
 }
 
 .box2 img {
