@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Básicos II</title>
+    <script>
+        console.log("Fundamentos Básicos II, JavaScript");
+
+        //"ejercicio 1"; 
+        /*"Tamaño Grande - Dado un array, escribe una función que cambie todos los números positivos en él, por el string “big”. Ejemplo: grande([-1,3,5,-5]) devuelve [-1, “big”, “big”, -5].")*/
+
+        function cambioPositivosaBig(array) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > 0) {
+                    array[i] = 'big';
+                }
+            }
+            console.log("el nuevo arreglo será: ");
+            return array;
+        }
+        cambioPositivosaBig([-1, 3, 5, -5]);
+        //respuesta: [-1, “big”, “big”, -5]
+
+        //ejercicio 2
+        /* Imprime (print) el menor, devuelve (return) el mayor - Crea una función que tome un array de números. La función debería imprimir (print) el menor valor del array, y devolver (return) el mayor.*/
+
+        function imprimeMenorRetornaMayor(array) {
+            var maximo = array[0];
+            var minimo = array[0];
+            for (let i = 0; i < array.length; i++) {
+                if (minimo > array[i]) {
+                    minimo = array[i];
+                    console.log("el numero de menor valor del areglo: " + minimo);
+                }
+                if (maximo < array[i]) {
+                    maximo = array[i];
+                }
+            }
+
+            return "el numero  de mayor valor del arreglo es: " + maximo;
+        }
+        imprimeMenorRetornaMayor([-1, 3, 30, -5]);
+        //respuesta: -5, 30
+
+        //ejercicio 3
+        /*Imprime (print) uno, devuelve (return) otro- Crea una función para un array de números. La función debería imprimir (print) el penúltimo valor y devolver (return) el primer valor impar.*/
+
+        function printPenultimoyRetornaImpar(array) {
+            var penultimonumero = array[array.length - 2];
+            console.log("el penultimo numero del arreglo es: " + penultimonumero);
+
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] % 2 != 0) {
+                    return "el primer valor impar es: " + array[i];
+                }
+            }
+        }
+        printPenultimoyRetornaImpar([8, -11, 7, 9]);
+
+        //ejercicio 4
+        /*Doble Visión - Dado un array, crea una función que devuelva un nuevo array donde cada valor se duplique. Entonces, doble([1,2,3]) debiera devolver [2, 4, 6] sin cambiar el array original.*/
+        function doble(x) {
+            var nuevoarray = [];
+            for (let i = 0; i < x.length; i++) {
+                x[i] = x[i] + x[i];
+                nuevoarray.push(x[i]);
+            }
+            console.log("el doble de cada valor del arreglo es: ");
+            return nuevoarray;
+        }
+        doble([5, 'hola ', -3, 'pollo ']);
+
+        //ejercicio 5
+        /*Contar Positivos -  Dado un array de números, crea una función para reemplazar el último valor con el número de valores positivos encontrados en el array. Ejemplo, contarPositivos([-1,1,1,1]) cambia el array original y devuelve [-1,1,1,3].*/
+        function contarPositivos(x) {
+            var positivos = 0;
+            for (let i = 0; i < x.length; i++) {
+                if (x[i] > 0) {
+                    positivos = positivos + 1
+                }
+            }
+            x[x.length] = positivos;
+            console.log("el último valor señala la cantidad de valores positivos del arreglo: ");
+            return x;
+        }
+        contarPositivos([-1, 1, 1, 1])
+
+        // ejercicio 6
+        /*Pares e Impares - Crea una función que acepte un array. Cada vez que ese array tenga 3 valores impares seguidos, imprime (print) “¡Qué imparcial!”, y cada vez que tenga 3 pares seguidos, imprime (print) “¡Es para bien!”.*/
+
+        function paresEImpares(array) {
+            var impares = 0;
+            var pares = 0;
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 != 0) {
+                    impares = impares + 1;
+
+                } else {
+                    pares = pares + 1;
+                }
+
+            }
+
+
+
+            console.log("los numeros pares son: " + pares, "los numeros impares son: " + impares);
+            //console.log (pares, impares); 
+        }
+        paresEImpares([2, 4, 1, 8, 7, 5, 1]);
+
+        //ejercicio 7
+        /*Incrementa los Segundos - Dado un array de números llamado arr, suma 1 a los elementos, específicamente a aquellos cuyo índice es impar (arr[1], arr[3], arr[5], etc). Luego, imprime (console.log) cada valor del array y devuelve el arreglo arr. */
+        function incrementaLosSegundos(arr) {
+            var segundos = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 != 0) {
+                    segundos.push(arr[i] + 1);
+
+                }
+            }
+            console.log("se suma 1 a los elementos impares: " + segundos);
+            console.log("retorna el arreglo original ")
+            return arr;
+        }
+        incrementaLosSegundos([1, 3, 5, 4]);
+
+        //ejercicio 8
+        /*Longitudes previas - Pasado un array (similar a decir ‘tomado un array’ o ‘dado un array’) que contiene strings, reemplaza cada string con un número de acuerdo cantidad de letras (longitud) del string anterior. Por ejemplo, longitudesPrevias([“programar”,“dojo”, “genial”]) debería devolver [“programar”,9, 4]. Pista: ¿For loops solo puede ir hacia adelante?*/
+
+        function longitudesPrevias(array) {
+            contador = 0;
+            for (let i = 0; i < array.length; i++) {
+                // if (array[i]= "" ) ){
+                contador = array.length array[0];
+
+
+
+            }
+            console.log(contador);
+        }
+        longitudesPrevias(["programar", "dojo", "genial"])
+
+        //ejercicio 9
+        /*Agrega Siete - Construye una función que acepte un array. Devuelve un nuevo array con todos los valores del original, pero sumando 7 a cada uno. No alteres el array original. Por ejemplo, agregaSiete([1,2,3) debería devolver [8,9,10] en un nuevo array.*/
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
