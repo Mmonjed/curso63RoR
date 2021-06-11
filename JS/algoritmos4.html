@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos IV</title>
+    <script>
+        console.log("Algoritmos IV")
+
+        //ejercicio 1
+        /*Dados un array y un valor Y, cuenta e imprime (print) el número de valores del array que sean mayores que Y. */
+        function mayoresQueY(array, y) {
+            var numerosmayores = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > y) {
+                    numerosmayores = numerosmayores + 1;
+                }
+            }
+            console.log("la cantidad de numeros mayores a 'y' son: ")
+            return numerosmayores;
+        }
+        mayoresQueY([4, 7, 8, 3], 5);
+
+        //ejercicio 2
+        /*Dado un array, imprime los valores máximos (max), mínimos (min) y promedio (average) para el array. */
+        function maxMinPromedio(array) {
+            min = array[0];
+            max = array[0];
+            suma = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (max < array[i]) {
+                    max = array[i];
+                }
+                if (min > array[i]) {
+                    min = array[i];
+                }
+                suma = suma + array[i];
+                var promedio = suma / array.length;
+            }
+            console.log(" el maximo valor del arreglo es: " + max);
+            console.log(" el minimo valor del arreglo es: " + min);
+            console.log(" el promedio de los valores del arreglo es: " + promedio);
+        }
+        maxMinPromedio([5, -8, 7, 21])
+
+        //ejercicio 3
+        /*Dado un array de números, crea una función que dé como resultado un nuevo array donde los valores negativos se reemplacen por el texto (string) ‘Dojo’. Por ejemplo, reemplazarNegativos([1,2,-3,-5,5]) debiera devolver [1,2, “Dojo”, “Dojo”, 5].*/
+        function reemplazarNegativos(array) {
+            var nuevoArray = [];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] < 0) {
+                    array[i] = "Dojo";
+                    nuevoArray.push(array[i]);
+                } else {
+                    nuevoArray.push(array[i]);
+                }
+            }
+            console.log("el nuevo array es: ");
+            return nuevoArray;
+        }
+        reemplazarNegativos([1, 2, -3, -5, 5]);
+
+        //ejercicio 4
+        /*Dado un array y su respectivo índice, remueve los valores en el rango del índice dado( acortando el array). Por ejemplo, removerRango([20,30,40,50,60,70],2,4)debiera devolver [20,30,70].*/
+        function removerRango(array, indice1, indice2) {
+            var nuevoarreglo = [];
+            for (let i = 0; i < array.length; i++) {
+                if (i < indice1 || i > indice2) {
+                    nuevoarreglo.push(array[i]);
+                }
+            }
+            console.log("nuevo arreglo despues de remover valores en los rangos indicados por los indices: ")
+            return nuevoarreglo;
+        }
+        removerRango([20, 30, 40, 50, 60, 70], 2, 4);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
