@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$this</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //adjunta un "click event listener" a todas las etiquetas img cuando el documento esté listo
+            $('img').click(function() {
+                $(this).hide();
+            });
+            //solo para una imagen lo hacemos a traves de id
+            $('#image1').click(function() {
+                $('#image1').hide();
+            });
+
+            //establecer color de fondo a todos los elementos p
+            //$('p').css('background-color', 'red');
+            $('p, a, #dojo').addClass('blue')
+
+        });
+    </script>
+
+    <head>
+
+    </head>
+
+    <body>
+        <div>
+            <p id='dojo'>hola</p>
+            <a href="#">este es a</a>
+
+
+        </div>
+        <img src="../JS/fotos/adventure-cat.png" id='image1' />
+        <img src="../JS/fotos/aidorucat.png" id='dojo' />
+        <img src="../JS/fotos/chellocat.jpg" />
+        <img src="../JS/fotos/cherry.jpg" />
+        <img src="../JS/fotos/catandninja.png" />
+    </body>
+
+</html>

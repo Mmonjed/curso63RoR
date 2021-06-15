@@ -11,7 +11,6 @@
 
         //ejercicio 1
         /*Configura un array para que los valores negativos se transformen en 0. Por ejemplo, resetNegativos([1,2,-1,-3]) debiera dar como resultado [1,2,0,0].*/
-
         function resetNegativos(array) {
             for (let i = 0; i < array.length; i++) {
                 if (array[i] < 0) {
@@ -22,10 +21,11 @@
             return array;
         }
         resetNegativos([1, 2, -1, -3]);
+        //respuesta: [1, 2, 0, 0]
+
 
         //ejercicio 2
         /*Dado un array, mueve todos los valores un espacio de derecha a izquierda eliminando el primer valor y dejando un 0 para el último valor. Por ejemplo, moverAdelante([1,2,3]) debiera dar como resultado [2,3,0].*/
-
         function moverAdelante(array) { //[1,2,3,4]
             var temp = 0;
             for (let i = 0; i < array.length; i++) { //i=0,
@@ -35,6 +35,8 @@
             console.log(array);
         }
         moverAdelante([1, 2, 3]);
+        //respuesta:  [2, 3, 0]
+
 
         //ejercicio 3
         /*Configura un array para que el resultado sean los valores en el orden contrario. Por ejemplo, returnReverso([1,2,3]) debe dar [3,2,1].*/
@@ -48,20 +50,11 @@
             console.log(array);
         }
         returnReverso([1, 2, 3]);
+        //respuesta:  [3, 2, 1]
+
 
         //ejercicio 4
         /*Crea una función que cambie un array repitiendo sus valores originales (manteniendo el mismo orden). Por ejemplo, repetirValores([4,”Ulysses”, 42, false]) debiera dar [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].*/
-
-        //Ejercicio 3:
-        /* function repetirValores(array) {
-            for(let i=0; i< array.length; i++){
-               array[i*2+1]= array[i]; 
-               array[i*2]= array[i];
-            }
-            console.log (array);
-         }
-         repetirValores([4,"Ulysses", 42, false]);*/
-
         function repetirValores(array) {
             for (let i = array.length - 1; i >= 0; i--) { //i=3
                 array[i * 2 + 1] = array[i];
@@ -71,6 +64,7 @@
             console.log(array);
         }
         repetirValores([4, "Ulysses", 42, false]);
+        //respuesta: [4, 4, "Ulysses", "Ulysses", 42, 42, false, false]
     </script>
 </head>
 
