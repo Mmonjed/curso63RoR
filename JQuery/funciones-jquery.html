@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //Función click y text
+            $('#boton1').click(function() {
+                $('#parrafo1').text(' hice click en el botón y cambió mi texto ');
+            })
+
+            //Función hide, show, toggle
+            $('#boton2').click(function() {
+                $('#parrafo2').hide();
+                alert('hice click en boton Hide y se ocultó mi párrafo, hago click en Show y aparece');
+            })
+            $('#boton3').click(function() {
+                $('#parrafo2').show();
+            })
+            $('#boton4').click(function() {
+                $('#parrafo2').toggle();
+            })
+
+            //Función slideDown,slideUp y slideToggle
+            $('#panel1').click(function() {
+                $('#panel2').slideDown('slow'); //lento
+            });
+            $('#panel2').click(function() {
+                $('#panel1').slideUp('fast'); //rápido
+            });
+            $('#panel2').click(function() {
+                $('#panel3').slideToggle('slow'); //lento
+            });
+
+            //función fadeIn y fadeOut
+            $('#boton5').click(function() {
+                $('.div1').fadeIn(); //por defecto
+                $('.div2').fadeIn('slow'); //lento
+                $('.div3').fadeIn(3000); //milisegundos
+            });
+            $('#boton6').click(function() {
+                $('.div1').fadeOut(); //por defecto
+                $('.div2').fadeOut('slow'); //lento
+                $('.div3').fadeOut(3000); //milisegundos
+            });
+
+            //Función addclass
+            $('#boton7').click(function() { //
+                $('#parraforojo').css('color', 'red');
+            });
+            $('#boton8').click(function() {
+                $('#parrafoimportante').addClass('importante');
+            });
+
+            //Función before y after 
+            $('#boton9').click(function() { //antes de la imagen 
+                $('img').before('<b>Before</b>'); // inserta la palabra before con negritas
+            });
+
+            $('#boton10').click(function() { //inserta la palabra after con cursiva 
+                $('img').after('<i>After</i>'); //despues de la imagen 
+            });
+
+            //Función append
+            $('#boton11').click(function() {
+                $('#parrafoagregado1').append('<b> agrega texto al párrafo con id en este caso</b>');
+            });
+
+            $('#boton12').click(function() {
+                $('ol').append('<li>agrega un item a la lista</li>');
+            });
+
+            $('#parrafo4').click(function() {
+                $('#parrafo4').html("<span id=span1> texto </span>   <strong>de reemplazo</strong>");
+                $('#span1').addClass('colorred');
+                $('#span1').attr('name', 'span1');
+
+                $('#container').append('<img id=imagen1>');
+                $('#imagen1').attr('src', 'gato.jpg');
+                $('#imagen1').attr('width', '200');
+            });
+
+            //fin de JQuery   
+        });
+    </script>
+    <style>
+        #panel2,
+        #panel3,
+        #panel1 {
+            padding: 5px;
+            text-align: center;
+            background-color: hotpink;
+            border: solid 1px black;
+        }
+        
+        #panel2 {
+            padding: 50px;
+            display: none;
+            background-color: darkturquoise;
+        }
+        
+        #fadein,
+        #fadeout {
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        img {
+            width: 200px;
+        }
+        
+        .importante {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>Mi ¡Asignación básica de JQuery!</h3>
+        <h1>Función Click y Text </h1>
+        <button id="boton1">boton1</button>
+        <p id="parrafo1">click en el botón para llamar el evento</p>
+        <hr>
+
+        <div>
+            <h1>Función Hide, Show y Toggle</h1>
+            <p id="parrafo2">clik en el Hide para ocultar el parrafo</p>
+            <input type="button" value="Hide" id="boton2">
+            <button id="boton3">Show</button>
+            <button id="boton4">Toggle</button>
+        </div>
+        <hr>
+
+        <div id="panel1"> clic para deslizar el panel hacia abajo !!!
+            <h3>Función slideDown,slideUp y slideToggle</h3>
+        </div>
+        <div id="panel2">clic para deslizar el panel hacia arriba !!!</div>
+        <div id="panel3">este es panel con toggle</div>
+        <hr>
+
+        <div>
+            <div id="fadein">
+                <p>Función fadeIn </p>
+                <button id="boton5">Click aqui para ver fadeIn</button><br><br>
+
+                <div class="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+                <div class="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+                <div class="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+            </div>
+            <div id="fadeout">
+                <p>Función fadeOut</p>
+
+                <button id="boton6"> Click aqui para ver fadeout</button><br><br>
+                <div class="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+                <div class="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+                <div class="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div>
+            <h3>Función que agrega una clase </h3>
+            <p id="parraforojo"> este es un párrafo sin clase, al hacer click en el botón se agrega la clase color red </p><br>
+            <button id="boton7">agrega una clase color rojo usando css </button>
+            <p id="parrafoimportante">este es un párrafo importante </p>
+            <button id="boton8"> agrega otra clase usando addclass </button>
+        </div>
+        <hr>
+
+        <div>
+            <h3>Función before,after </h3>
+            <button id="boton9">inserta before</button>
+            <img src="../JQuery/fotos/cherry.jpg" alt="">
+            <button id="boton10">inserta after </button>
+            <hr>
+
+            <h3>Función append</h3>
+            <p id="parrafoagregado1">esto es un parrafo</p>
+            <p>esto es otro parrafo</p>
+            <ol>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ol>
+            <button id="boton11">agrega texto</button>
+            <button id="boton12">agrega un elemento a la lista</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

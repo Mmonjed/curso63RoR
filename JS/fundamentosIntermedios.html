@@ -26,6 +26,21 @@
 
         //ejercicio 6
         /*Array: Segundo más grande: Devuelve el segundo elemento más grande de un array. Dado [42,1,4,3.14,7], devuelve 7.  Si el array es muy pequeño, devuelve null.*/
+        function segundoElemento(array) {
+            var masgrande = array[0];
+
+            for (let i = 0; i < array.length; i++) {
+                if (masgrande[i] < array[i]) {
+                    masgrande[i] = array[i];
+                }
+                var segundomasgrande = masgrande[0];
+                if (segundomasgrande[i] < masgrande) {
+                    segundomasgrande[i] = masgrande[i];
+                }
+            }
+            return segundomasgrande;
+        }
+        segundoElemento([42, 1, 4, 3.14, 7]);
 
         //ejercicio 7
         /*Doble Problema Par: Crea una función que cambie un array dado duplicando cada uno de sus elementos y manteniendo el orden original. Convierte [4, "Ulysses", 42, false]   a    [4,4, "Ulysses", "Ulysses", 42, 42, false, false].*/

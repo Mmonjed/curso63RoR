@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //función click
+            $('#boton1').click(function() {
+                $('#parrafo1').text("click realizado en el botón"); //text(): cambia texto o captura el texto del elemento
+            });
+            //hide
+            $('#boton2').click(function() {
+                $('#parrafo2').hide(); //oculta el elemento
+            });
+            //show
+            $('#boton3').click(function() {
+                $('#parrafo2').show(); //mostrar
+            });
+            //toggle
+            $('#boton4').click(function() {
+                $('#parrafo2').toggle(); //mostrar
+            });
+            //fin jquery
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Función Click y Text</h1>
+        <p id="parrafo1">clik en el botón para llamar al evento click</p>
+        <button id="boton1">Click</button>
+        <hr>
+        <h1>Función Hide, Show y Toggle</h1>
+        <p id="parrafo2">clik en el botón para ocultar el parrafo</p>
+        <button id="boton2">Hide</button>
+        <button id="boton3">Show</button>
+        <button id="boton4">Toggle</button>
+        <hr>
+    </div>
+</body>
+
+</html>

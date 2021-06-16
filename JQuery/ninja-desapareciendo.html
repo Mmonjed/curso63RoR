@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Desapareciendo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            for (let i = 1; i <= 8; i++) {
+                $('#container').append('<img src=ninja.jpg>');
+            }
+            $('#container').append('<p><i><b>Haga Click en una imagen</b></i></p>');
+            $('#container').append('<button><i><b>Restaurar</b></i></button>');
+            $('#container').addClass('contenedor')
+            $('button').addClass('boton');
+            $('img').addClass('imagenes');
+            $('img').click(function() {
+                $(this).hide();
+            });
+            $('button').click(function() {
+                $('img').show();
+
+            });
+        });
+    </script>
+    <style>
+        .contenedor {
+            width: 800px;
+            background-color: gray;
+            padding: 5px;
+            text-align: center;
+        }
+        
+        .imagenes {
+            margin: 15px;
+            border: 1px solid black;
+            width: 150px;
+        }
+        
+        .boton {
+            background-color: cyan;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+
+</body>
+
+</html>
