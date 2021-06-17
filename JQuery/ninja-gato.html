@@ -5,56 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ninja Gato</title>
+    <title>Ninja a Gato</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#container').append('<img src=../JQuery/fotos/img/cat0.png id=gato0 >');
-            $('#container').append('<img src=../JQuery/fotos/img/cat1.png id=gato1 >');
-            $('#container').append('<img src=../JQuery/fotos/img/cat2.png id=gato2 >');
-            $('#container').append('<img src=../JQuery/fotos/img/cat3.png id=gato3 >');
-            $('#container').append('<img src=../JQuery/fotos/img/cat4.png id=gato4 >');
+            //var nombreImagen = ['ninja0.png', 'ninja1.png', 'ninja2.png', 'ninja3.png'];
+            //append
+            $('#container').addClass('div');
+
+            for (let i = 0; i <= 4; i++) {
+                $('#container').append('<img src="ninja' + i + '.png" alt-src="cat' + i + '.png">')
+                $('#container').append('<br>');
+            }
 
             $('img').click(function() {
-                $(this).attr('src', $(this).attr('data-alt-src'));
-                $('#gato1').attr('src', '../JQuery/fotos/img/ninja1.png');
-                $('#gato2').attr('src', '../JQuery/fotos/img/ninja2.png');
-                $('#gato3').attr('src', '../JQuery/fotos/img/ninja3.png');
-                $('#gato4').attr('src', '../JQuery/fotos/img/ninja4.png');
-
+                var temp = $(this).attr('src'); //var temp= "img/ninja0.png";
+                var nuevaImagen = $(this).attr('alt-src');
+                $(this).attr('src', nuevaImagen);
+                $(this).attr('alt-src', temp);
             });
 
-            // console.log('data-alt-src value is', $(this).attr('data alt src'));
-
-
-
-
-
-            //fin jquery
         });
     </script>
     <style>
-        #container {
+        .div {
+            background-color: palegoldenrod;
             width: 200px;
-        }
-        
-        #gato0,
-        #gato1,
-        #gato2,
-        #gato3,
-        #gato4,
-        #gato5 {
-            padding: 2px;
-            display: inline-block;
+            padding: 30px;
         }
     </style>
 </head>
 
 <body>
     <div id="container">
-        <!-- <img src="../JQuery/fotos/img/cat0.png" data-alt-src="../JQuery/fotos/img/ninja0.png" >-->
-
-
 
     </div>
 </body>
