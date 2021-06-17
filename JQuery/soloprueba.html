@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ninja-gato</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('img').click(function() {
+                $(this).attr('container', $(this).attr('src'));
+                $(this).attr('src', $(this).attr('data-alt-src'));
+                $(this).attr('data-alt-src', $(this).attr('container'));
+            })
+            $('img').addClass('imagenes');
+            $('img').click(function() {
+                console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+            });
+
+        })
+    </script>
+    <style>
+        .imagenes {
+            display: block;
+            width: 300px;
+            margin: 3px;
+        }
+    </style>
+
+    <body>
+        <div id="container">
+            <img src="../JQuery/fotos/img/ninja0.png" data-alt-src="../JQuery/fotos/img/cat0.png" ">
+            <img src="../JQuery/fotos/img/ninja1.png " data-alt-src="../JQuery/fotos/img/cat1.png " >
+            <img src="../JQuery/fotos/img/ninja2.png " data-alt-src="../JQuery/fotos/img/cat2.png " >
+            
+        </div>
+    </body>
+
+</html>

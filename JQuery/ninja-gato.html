@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gato</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#container').append('<img src=../JQuery/fotos/img/cat0.png id=gato0 >');
+            $('#container').append('<img src=../JQuery/fotos/img/cat1.png id=gato1 >');
+            $('#container').append('<img src=../JQuery/fotos/img/cat2.png id=gato2 >');
+            $('#container').append('<img src=../JQuery/fotos/img/cat3.png id=gato3 >');
+            $('#container').append('<img src=../JQuery/fotos/img/cat4.png id=gato4 >');
+
+            $('img').click(function() {
+                $(this).attr('src', $(this).attr('data-alt-src'));
+                $('#gato1').attr('src', '../JQuery/fotos/img/ninja1.png');
+                $('#gato2').attr('src', '../JQuery/fotos/img/ninja2.png');
+                $('#gato3').attr('src', '../JQuery/fotos/img/ninja3.png');
+                $('#gato4').attr('src', '../JQuery/fotos/img/ninja4.png');
+
+            });
+
+            // console.log('data-alt-src value is', $(this).attr('data alt src'));
+
+
+
+
+
+            //fin jquery
+        });
+    </script>
+    <style>
+        #container {
+            width: 200px;
+        }
+        
+        #gato0,
+        #gato1,
+        #gato2,
+        #gato3,
+        #gato4,
+        #gato5 {
+            padding: 2px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- <img src="../JQuery/fotos/img/cat0.png" data-alt-src="../JQuery/fotos/img/ninja0.png" >-->
+
+
+
+    </div>
+</body>
+
+</html>
