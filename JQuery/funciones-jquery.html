@@ -75,6 +75,7 @@
                 $('ol').append('<li>agrega un item a la lista</li>');
             });
 
+            // Función attr y html
             $('#parrafo4').click(function() {
                 $('#parrafo4').html("<span id=span1> texto </span>   <strong>de reemplazo</strong>");
                 $('#span1').addClass('colorred');
@@ -83,6 +84,11 @@
                 $('#container').append('<img id=imagen1>');
                 $('#imagen1').attr('src', 'gato.jpg');
                 $('#imagen1').attr('width', '200');
+            });
+
+            // Función val 
+            $('#boton13').click(function() {
+                $("input:text").val("Mona");
             });
 
             //fin de JQuery   
@@ -191,7 +197,13 @@
             <button id="boton11">agrega texto</button>
             <button id="boton12">agrega un elemento a la lista</button>
         </div>
-
+        <hr>
+        <div>
+            <h3>Función Val </h3>
+            <p>Nonmbre: <input type="text" name="user"></p>
+            <button id="boton13">agrega contenido a la etiqueta</button>
+        </div>
+        <hr>
     </div>
 </body>
 
