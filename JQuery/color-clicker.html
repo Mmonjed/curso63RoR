@@ -16,20 +16,27 @@
         }
         $(document).ready(function() {
             $('#large_box').click(function() {
-                alert('you clicked the big box!');
-                //comenta esto cuando hayas averiguado para qué se utiliza event.stopPropagation 
+                $('#large_box').css('background-color', 'dimgray')
+                $('.side_box').css('background-color', 'cyan');
+                $('.middle_box').css('background-color', 'darkcyan');
             })
-            $('.side_box').click(function(event) {
-                event.stopPropagation();
-            })
+
             $('.middle_box').click(function(event) {
+                $('#large_box').css('background-color', 'cornflowerblue')
                 event.stopPropagation();
             })
+
+            $('.side_box').click(function(event) {
+                $('.side_box').css('background-color', 'orange')
+                event.stopPropagation();
+            })
+
         });
     </script>
     <style type="text/css">
         * {
             font-family: sans-serif;
+            background-color:
         }
         
         h2,
