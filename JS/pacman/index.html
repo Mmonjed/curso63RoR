@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style type="text/css">
+        body {
+            background-color: black;
+        }
+        
+        div.row div {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        
+        div.brick {
+            background-color: blue;
+        }
+        
+        div.coin {
+            background: url('coin.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        div.pacman {
+            background: url('pacman.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+    </div>
+    <div class="row">
+        <div class="brick"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="pacman"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="brick"></div>
+    </div>
+    <div class="row">
+        <div class="brick"></div>
+        <div class="coin"></div>
+        <div class="brick"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="brick"></div>
+    </div>
+    <div class="row">
+        <div class="brick"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="brick"></div>
+    </div>
+    <div class="row">
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+    </div>
+    <script>
+        var world = [
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2],
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2],
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2],
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2],
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2],
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2],
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2],
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2],
+            [1, 2, 2, 2, 2, 1, 2, 2, 2, 2]
+        ]
+
+        function displayworld() {
+            var output = '';
+            for (var i = 0; i < world.length; i++) {
+                output = ('<div class="row"</div>');
+                for (var j = 0; j < world[i].length; j++) {
+                    if (world[i][j] == 2)
+                        output = ('<div class="brick"</div>');
+                    else if (world[i][j] == 1)
+                        output == ('<div class="coin"</div>');
+                    if (world[i][j] == 0)
+                        output = ('<div class="empty"</div>');
+                }
+                output == "</div>";
+            }
+            console.log(output);
+            //document.getElementById('world').innerHTML = output;
+        }
+        displayworld();
+    </script>
+</body>
+
+</html>
