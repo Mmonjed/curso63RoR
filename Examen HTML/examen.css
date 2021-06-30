@@ -8,6 +8,12 @@
     height: auto;
     margin: 10px;
     background-color: #eaeaea;
+    padding-bottom: 30px;
+}
+
+#parrafofinal {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .header {
@@ -111,6 +117,7 @@
     background-color: white;
     margin-top: 20px;
     margin-left: 25px;
+    border-radius: 5px;
 }
 
 .izquierda img {
@@ -133,6 +140,68 @@
 /**/
 
 .footer {
-    background-color: black;
+    background-color: #0d0d0d;
     color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.footer h4 {
+    padding-bottom: 15px;
+}
+
+.footer p {
+    color: #7d7d7d;
+}
+
+.box1 {
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.box2 {
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.box2 a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #7d7d7d;
+}
+
+.box3 {
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.box3 input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 120px;
+    background-color: #262626;
+}
+
+#phone {
+    width: 258px;
+}
+
+.botonbox {
+    width: 70px;
+    border: black solid;
+    padding: 5px;
+    color: #6b6b6b;
+    background-color: #151515;
+}
+
+.box3 p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 350px;
 }
