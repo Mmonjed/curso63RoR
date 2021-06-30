@@ -5,43 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather API</title>
+    <title>cual-pokemon</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            //$('#botontiempo').click(function() {
-
-            // });
             $('button').click(function() {
-                $('#miModal').addClass('miModaltarget');
-
-
+                var ciudad = $('#name').val();
 
                 $.get("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&APPID=57e8fd0385779d7545d45fadb8f37121", function(respuesta) {
                     console.log(respuesta);
-                    var ciudad = $('#name').val();
 
+                    $('#miModal').addClass('miModaltarget');
 
                     var celcius = Math.round(respuesta.main.temp - 273.15);
-                    $('#respuestas').html('<h3>Ciudad: ' + respuesta.name + '</h3>');
-                    $('#respuestas').append('<p>Coordenadas: la longitud es ' + respuesta.coord.lon + '</p>');
-                    $('#respuestas').append('<p>Y la Latitud es ' + respuesta.coord.lat + '</p>');
-                    $('#respuestas').append('<p>Sensación Térmica de : ' + celcius + '° ' + '</p>');
+                    $('.respuestas').html('');
+                    $('.respuestas').html('<h3>Ciudad: ' + respuesta.name + '</h3>');
+                    $('.respuestas').append('<h4> <b>Coordenadas</b> </h4>');
+                    $('.respuestas').append('<button class="boton2"> <p> Longitud </p>' + respuesta.coord.lon + '</button>' + '<button class="boton2"><p> Latitud </p>' + respuesta.coord.lat + '</button>');
+                    $('.respuestas').append('<p><b>Sensación Térmica de :</b> ' + celcius + '° ' + '</p>');
 
-                    var soleado = 'Soleado';
-                    var nublado = 'Parcialmente Nublado';
-                    if (celcius > 20) {
-                        celcius = soleado
-                        $('#respuestas2').html('<p>  <img src="soleado.svg" >' + soleado + '</p>')
-
-                    } else {
-                        celcius = nublado
-                    }
-                    $('#respuestas2').html('<p>  <img src="parcial_nublado.svg" >' + nublado + '</p>')
-                }, 'json');
-
+                }, "json");
             });
-            $('button').click(function() {
+            $('#cerrar').click(function() {
                 //quitar una clase .removeClass()
                 $('#miModal').removeClass('miModaltarget');
 
@@ -54,56 +40,12 @@
         }
         
         .contenido_modal {
-            background: url('p05_01.jpg');
+            background-color: grey;
             width: 200px;
             padding: 10px 20px;
             margin: 5% auto;
             position: relative;
             border-radius: 10px;
-        }
-        
-        .pokemon {
-            margin-left: 45px;
-            margin-bottom: 20px;
-        }
-        
-        #pokedex {
-            background-color: darkseagreen;
-            text-align: center;
-            padding: 10px;
-            border-radius: 50px;
-        }
-        
-        .datos_pokemon {
-            background-color: #30a7d7;
-            text-align: center;
-            text-decoration: darkslategray;
-            padding: 10px;
-        }
-        
-        .boton2 {
-            background-color: #4d901b;
-            text-align: center;
-            padding: 5px;
-            font-style: italic;
-            color: black;
-            font-weight: bold;
-        }
-        
-        h1 {
-            text-align: center;
-            color: #30a7d7;
-        }
-        
-        h2 {
-            color: #28523b;
-            font-weight: bold;
-        }
-        
-        button {
-            color: black;
-            background-color: darkseagreen;
-            padding: 5px;
         }
         
         .modal {
@@ -118,33 +60,44 @@
             transition: all 1s;
         }
         
-        #miModal:target {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        
         .miModaltarget {
             opacity: 1;
             pointer-events: auto;
         }
+        
+        .boton2 {
+            background-color: #4d901b;
+            text-align: center;
+            padding: 5px;
+            font-style: italic;
+            color: black;
+            font-weight: bold;
+        }
+        
+        button {
+            color: black;
+            background-color: darkseagreen;
+            padding: 5px;
+        }
     </style>
 </head>
 
+
 <body>
-
     <div id="container">
-        <button type="submit">Enviar</button>
-
-        <div id="miModal" class="modal">
+        <img src="soleado.svg" alt="">
+        <div class="tiempo">
             <input type="text" id="name">
-            <button type="submit">consulta</button>
-
-            <div id="respuestas">
-            </div>
-            <div id="respuestas2"></div>
+            <button type="submit">Enviar</button>
         </div>
+        <div id="miModal" class="modal">
+            <div class="contenido_modal">
+                <button id="cerrar">Volver</button>
+                <div class="respuestas">
 
-
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

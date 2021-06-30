@@ -28,13 +28,13 @@
                     //llenar el modal con la informacion del pokemon
                     //respuesta.name; respuesta.sprites.front_default;respuesta.types[0].type.name;respuesta.height;respuesta.weight
 
-                    $('.pokemon').html('');
-                    $('.pokemon').append('<img  id=pokedex src="' + respuesta.sprites.front_default + '" alt="">');
-                    $('.datos_pokemon').html('');
-                    $('.datos_pokemon').append('<h2>' + respuesta.name + '</h2>');
-                    $('.datos_pokemon').append('<h4> <b>Tipo</b> <button class="boton2">' + respuesta.types[0].type.name + '</button>');
-                    $('.datos_pokemon').append('<p><b>Altura :</b> ' + respuesta.height + '</p>');
-                    $('.datos_pokemon').append('<p><b>Peso :</b> ' + respuesta.weight + '</p>');
+                    /* $('.pokemon').html('');
+                     $('.pokemon').append('<img  id=pokedex src="' + respuesta.sprites.front_default + '" alt="">');
+                     $('.datos_pokemon').html('');
+                     $('.datos_pokemon').append('<h2>' + respuesta.name + '</h2>');
+                     $('.datos_pokemon').append('<h4> <b>Tipo</b> <button class="boton2">' + respuesta.types[0].type.name + '</button>');
+                     $('.datos_pokemon').append('<p><b>Altura :</b> ' + respuesta.height + '</p>');
+                     $('.datos_pokemon').append('<p><b>Peso :</b> ' + respuesta.weight + '</p>');*/
                 }, "json");
 
             });
@@ -135,9 +135,9 @@
             <div class="contenido_modal">
 
                 <button id="cerrar">Volver</button>
-                <h1>Pokedex</h1>
+                <!--<h1>Pokedex</h1>
                 <div class="pokemon"></div>
-                <div class="datos_pokemon"></div>
+                <div class="datos_pokemon"></div>-->
             </div>
         </div>
     </div>
