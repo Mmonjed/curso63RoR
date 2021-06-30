@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -8,12 +9,11 @@
     height: auto;
     margin: 10px;
     background-color: #eaeaea;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 #parrafofinal {
     text-align: center;
-    margin-top: 10px;
 }
 
 .header {
@@ -60,20 +60,23 @@
     background-color: #dedede;
 }
 
+.main_niño {
+    background-image: linear-gradient(to right, #eaeaea, #ffffff, #eaeaea);
+}
+
 .main {
     width: 480px;
     height: auto;
     display: inline-block;
     vertical-align: top;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 20px;
-    margin-right: 100px;
+    margin-right: 150px;
 }
 
 #niño {
     display: inline-block;
     padding: 15px;
-    margin-left: 100px;
+    margin-left: 110px;
 }
 
 #boton {
@@ -85,12 +88,27 @@
     margin-left: 75%;
 }
 
+.main h1 {
+    margin-bottom: 20px;
+}
+
 
 /**/
+
+.container2 {
+    background-color: #eaeaea;
+}
 
 .derecha {
     display: inline-block;
     margin-top: 20px;
+}
+
+.linea2 {
+    display: inline-block;
+    height: 170px;
+    background-color: #dedede;
+    width: 1.5px;
 }
 
 .box {
@@ -107,10 +125,13 @@
 
 .box h2 {
     display: inline-block;
+    margin-bottom: 10px;
+    text-align: justify;
 }
 
 .izquierda {
-    width: 400px;
+    width: 392px;
+    height: 400px;
     display: inline-block;
     vertical-align: top;
     padding: 15px;
@@ -128,6 +149,7 @@
     display: inline-block;
     width: 200px;
     vertical-align: top;
+    text-align: justify;
 }
 
 .inferior {
@@ -145,6 +167,8 @@
     padding: 10px;
     border-radius: 5px;
     margin-left: 5px;
+    padding-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .footer h4 {
@@ -172,6 +196,11 @@
     text-decoration: none;
     margin-bottom: 10px;
     color: #7d7d7d;
+}
+
+.box2 li {
+    margin-bottom: 10px;
+    list-style: none;
 }
 
 .box3 {
