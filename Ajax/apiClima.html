@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cual-pokemon</title>
+    <title>Api Clima</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('button').click(function() {
+            $('img').click(function() {
                 var ciudad = $('#name').val();
 
                 $.get("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&APPID=57e8fd0385779d7545d45fadb8f37121", function(respuesta) {
@@ -27,20 +27,48 @@
 
                 }, "json");
             });
-            $('#cerrar').click(function() {
+            $('.cerrar').click(function() {
                 //quitar una clase .removeClass()
                 $('#miModal').removeClass('miModaltarget');
 
             });
+
+
+
+
+
         });
     </script>
     <style>
-        #container {
-            background-color: darkseagreen;
+        .container {
+            background: url('fondo2.png');
+            width: 80%;
+            display: inline-block;
+        }
+        
+        .container img {
+            display: inline-block;
+        }
+        
+        .ingreso {
+            display: inline-block;
+            padding: 20px;
+            vertical-align: top;
+        }
+        
+        .ingreso label {
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .ingreso input {
+            padding: 15px;
+            background-color: lightskyblue;
         }
         
         .contenido_modal {
-            background-color: grey;
+            background-color: lightskyblue;
             width: 200px;
             padding: 10px 20px;
             margin: 5% auto;
@@ -72,11 +100,13 @@
             font-style: italic;
             color: black;
             font-weight: bold;
+            margin-right: 10px;
+            margin-left: 10px;
         }
         
         button {
-            color: black;
-            background-color: darkseagreen;
+            color: white;
+            background-color: black;
             padding: 5px;
         }
     </style>
@@ -84,18 +114,20 @@
 
 
 <body>
-    <div id="container">
-        <img src="soleado.svg" alt="">
+    <div class="container">
+        <div class="ingreso">
+            <form action="#" method="get" autocomplete="on"></form>
+            <input type="text" id="name" placeholder="Ingresa Ciudad">
+            <label for="name"> Y has click en el Mapa</label>
+            </form>
+        </div>
+        <img src="mapamundi.gif" alt="">
         <div class="tiempo">
-            <input type="text" id="name">
-            <button type="submit">Enviar</button>
         </div>
         <div id="miModal" class="modal">
             <div class="contenido_modal">
-                <button id="cerrar">Volver</button>
-                <div class="respuestas">
-
-                </div>
+                <button class="cerrar">Volver</button>
+                <div class="respuestas"> </div>
             </div>
         </div>
     </div>
