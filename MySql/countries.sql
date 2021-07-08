@@ -1,4 +1,4 @@
--- ¿Qué consulta harías para obtener todos los países que hablan esloveno? Tu consulta debe devolver el nombre del país, el idioma y el porcentaje de idioma. Tu consulta debe organizar el resultado por porcentaje de idioma en orden descendente. (1)
+-- 1 ¿Qué consulta harías para obtener todos los países que hablan esloveno? Tu consulta debe devolver el nombre del país, el idioma y el porcentaje de idioma. Tu consulta debe organizar el resultado por porcentaje de idioma en orden descendente. (1)
 
 use world;
 
@@ -19,13 +19,9 @@ select  name,language, percentage from languages
 INNER JOIN countries ON languages.country_id = countries.id
 where countries.id in (200,107,96,16)
 order by percentage desc;
-select * from cities;
-select * from countries;
-select * from languages; 
 
 
-
--- ¿Qué consulta ejecutarías para mostrar el número total de ciudades para cada país? Su consulta debe devolver el nombre del país y el número total de ciudades. Tu consulta debe organizar el resultado por el número de ciudades en orden descendente. (3)
+-- 2 ¿Qué consulta ejecutarías para mostrar el número total de ciudades para cada país? Su consulta debe devolver el nombre del país y el número total de ciudades. Tu consulta debe organizar el resultado por el número de ciudades en orden descendente. (3)
 
 select * from countries cou; 
 select * from countries
@@ -52,7 +48,7 @@ group by countries.name
 order by total desc;
 
 
---  ¿Qué consulta harías para obtener todas las ciudades de México con una población de más de 500,000? Tu consulta debe organizar el resultado por población en orden descendente. (1)
+-- 3 ¿Qué consulta harías para obtener todas las ciudades de México con una población de más de 500,000? Tu consulta debe organizar el resultado por población en orden descendente. (1)
 
 select * from countries; 
 select * from countries cou 
@@ -66,7 +62,7 @@ where country_id = 136
 and cit.population > '500000' 
 order by cit.population desc; 
 
--- ¿Qué consulta ejecutarías para obtener todos los idiomas en cada país con un porcentaje superior al 89%? Tu consulta debe organizar el resultado por porcentaje en orden descendente. (1)
+-- 4 ¿Qué consulta ejecutarías para obtener todos los idiomas en cada país con un porcentaje superior al 89%? Tu consulta debe organizar el resultado por porcentaje en orden descendente. (1)
 
 select * from languages;
 

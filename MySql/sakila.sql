@@ -19,7 +19,7 @@ select concat(customer.first_name, " " ,customer.last_name) as nombre, customer.
 INNER JOIN address ON address.address_id = customer.address_id
 where address.address_id in (256,517);
 
---  ¿Qué consulta harías para obtener todas las películas de comedia? Su consulta debe devolver el título de la película, la descripción, el año de estreno, la calificación, las características especiales y el género (categoría).
+-- 2 ¿Qué consulta harías para obtener todas las películas de comedia? Su consulta debe devolver el título de la película, la descripción, el año de estreno, la calificación, las características especiales y el género (categoría).
 
 select * from category; -- id 5
 select * from film; 
@@ -108,15 +108,6 @@ select * from category; -- category_id, name
 select * from film_category; -- une categoria con film-- film_id, category_id
 select * from film_actor; -- une actor con film -- actor_id, film_id
 
-select  film.title pelicula, film.description descripcion, film.release_year lanzamiento, film.rating calificacion, film.special_features caracteristicas_especiales, category.name genero 
-from film_category
-inner join film on film.film_id = film_category.film_id
-inner join category on category.category_id = film_category.category_id
- inner join (select actor.actor_id, actor.first_name nombre_actor, actor.last_name apellido_actor
-from film_actor
-inner join actor on actor.actor_id = film_actor.actor_id
-inner join film on film.film_id = film_actor.film_id);
-
 
 select  film.title pelicula, film.description descripcion, film.release_year lanzamiento, film.rating calificacion, film.special_features caracteristicas_especiales, actor.actor_id, concat(actor.first_name, "  " ,actor.last_name) as Nombre_actor
 from  film, category, film_category, actor, film_actor
@@ -127,4 +118,10 @@ and film.film_id = film_actor.film_id
 and actor.actor_id = 23
 order by film.title asc;
                    
+select * from film_actor
+INNER JOIN FILM ON film.film_id = film_actor.film_id
+INNER JOIN ACTOR ON actor.actor_id = film_actor.actor_id
+INNER JOIN film_category ON film_category.film_id = film.film_id
+INNER JOIN CATEGORY ON category.category_id= film_category.category_id
+where film_actor.actor_id = 23;
 
